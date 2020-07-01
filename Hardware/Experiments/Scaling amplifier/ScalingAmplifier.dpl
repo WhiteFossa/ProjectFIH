@@ -1,0 +1,29 @@
+<Qucs Schematic 0.0.20>
+<Properties>
+  <View=-61,0,1402,1048,1,0,0>
+  <Grid=10,10,0>
+  <DataSet=ScalingAmplifier.dat>
+  <DataDisplay=ScalingAmplifier.sch>
+  <OpenDisplay=1>
+  <Script=ScalingAmplifier.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 40 953 1315 943 3 #c0c0c0 1 00 1 0 5e-05 0.001 1 -0.005 0.005 0.0515594 1 -1 0.1 1 315 0 225 "" "" "" "">
+	<"Vin.Vt" #0000ff 0 3 0 0 0>
+	<"Uout.Vt" #ff0000 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
