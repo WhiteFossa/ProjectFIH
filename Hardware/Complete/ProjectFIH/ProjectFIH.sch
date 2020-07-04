@@ -483,7 +483,7 @@ $EndComp
 Wire Wire Line
 	6350 2800 6350 2900
 Wire Wire Line
-	6350 2400 6350 2050
+	6350 2400 6350 2300
 $Comp
 L power:+5V #PWR014
 U 1 1 5F05201F
@@ -499,4 +499,120 @@ Wire Wire Line
 	6350 1600 6350 1750
 Text Notes 6400 2200 0    50   ~ 0
 OK - 5V\nOverheat - 0V
+$Comp
+L Transistor_FET:2N7002 Q2
+U 1 1 5F010FE4
+P 6600 3300
+F 0 "Q2" H 6804 3346 50  0000 L CNN
+F 1 "2N7002" H 6804 3255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6800 3225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 6600 3300 50  0001 L CNN
+	1    6600 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5F014E6F
+P 6700 3600
+F 0 "#PWR016" H 6700 3350 50  0001 C CNN
+F 1 "GND" H 6705 3427 50  0000 C CNN
+F 2 "" H 6700 3600 50  0001 C CNN
+F 3 "" H 6700 3600 50  0001 C CNN
+	1    6700 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3500 6700 3600
+Wire Wire Line
+	6700 3100 6700 2850
+Wire Wire Line
+	6700 2300 6350 2300
+Connection ~ 6350 2300
+Wire Wire Line
+	6350 2300 6350 2050
+Text GLabel 5800 3300 0    50   Input ~ 0
+HeatOFF
+$Comp
+L Device:R R12
+U 1 1 5F018879
+P 6150 3300
+F 0 "R12" V 5943 3300 50  0000 C CNN
+F 1 "4.7k" V 6034 3300 50  0000 C CNN
+F 2 "" V 6080 3300 50  0001 C CNN
+F 3 "~" H 6150 3300 50  0001 C CNN
+	1    6150 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6400 3300 6300 3300
+Wire Wire Line
+	6000 3300 5800 3300
+$Comp
+L Device:R R13
+U 1 1 5F0296C2
+P 7000 2850
+F 0 "R13" V 6793 2850 50  0000 C CNN
+F 1 "47" V 6884 2850 50  0000 C CNN
+F 2 "" V 6930 2850 50  0001 C CNN
+F 3 "~" H 7000 2850 50  0001 C CNN
+	1    7000 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2850 6700 2850
+Connection ~ 6700 2850
+Wire Wire Line
+	6700 2850 6700 2300
+$Comp
+L Transistor_FET:IRLZ44N Q3
+U 1 1 5F02FAAF
+P 7500 2850
+F 0 "Q3" H 7704 2896 50  0000 L CNN
+F 1 "IRLZ44N" H 7704 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7750 2775 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 7500 2850 50  0001 L CNN
+	1    7500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 2850 7150 2850
+$Comp
+L power:GND #PWR018
+U 1 1 5F031AC1
+P 7600 3150
+F 0 "#PWR018" H 7600 2900 50  0001 C CNN
+F 1 "GND" H 7605 2977 50  0000 C CNN
+F 2 "" H 7600 3150 50  0001 C CNN
+F 3 "" H 7600 3150 50  0001 C CNN
+	1    7600 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3050 7600 3150
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5F039ABC
+P 7800 2350
+F 0 "J2" H 7880 2342 50  0000 L CNN
+F 1 "Heater" H 7880 2251 50  0000 L CNN
+F 2 "" H 7800 2350 50  0001 C CNN
+F 3 "~" H 7800 2350 50  0001 C CNN
+	1    7800 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2450 7600 2650
+$Comp
+L power:+24V #PWR017
+U 1 1 5F03C9B5
+P 7600 2150
+F 0 "#PWR017" H 7600 2000 50  0001 C CNN
+F 1 "+24V" H 7615 2323 50  0000 C CNN
+F 2 "" H 7600 2150 50  0001 C CNN
+F 3 "" H 7600 2150 50  0001 C CNN
+	1    7600 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2150 7600 2350
 $EndSCHEMATC
