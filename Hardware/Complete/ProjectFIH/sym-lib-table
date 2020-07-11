@@ -1,3 +1,2 @@
 (sym_lib_table
-  (lib (name ProjectFIH-rescue)(type Legacy)(uri ${KIPRJMOD}/ProjectFIH-rescue.lib)(options "")(descr ""))
 )
