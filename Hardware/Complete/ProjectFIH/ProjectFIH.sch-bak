@@ -1621,7 +1621,7 @@ Text GLabel 7750 7050 0    50   Input ~ 0
 MCU_PL_ON
 Wire Wire Line
 	7750 7050 7900 7050
-Text GLabel 8500 7150 2    50   Input ~ 0
+Text GLabel 9150 7150 2    50   Input ~ 0
 PL_ON
 Wire Wire Line
 	8500 7150 8400 7150
@@ -1762,4 +1762,17 @@ F 3 "" H 6150 3050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6150 3050 6150 3000
+$Comp
+L 74xx:74HC04 U?
+U 5 1 5F3652B1
+P 8800 7150
+F 0 "U?" H 8800 7467 50  0000 C CNN
+F 1 "74HC04" H 8800 7376 50  0000 C CNN
+F 2 "" H 8800 7150 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 8800 7150 50  0001 C CNN
+	5    8800 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 7150 9100 7150
 $EndSCHEMATC
