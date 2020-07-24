@@ -1553,7 +1553,7 @@ Wire Wire Line
 Connection ~ 7000 7250
 Connection ~ 5300 7000
 Text GLabel 7000 6300 0    50   Input ~ 0
-MCUHeatOFF
+MCUHeatOff
 Wire Wire Line
 	7100 6300 7000 6300
 Text GLabel 7700 6400 2    50   Input ~ 0
