@@ -516,16 +516,14 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J6
 U 1 1 5F039ABC
-P 8400 2350
-F 0 "J6" H 8480 2342 50  0000 L CNN
-F 1 "Heater" H 8480 2251 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 8400 2350 50  0001 C CNN
-F 3 "~" H 8400 2350 50  0001 C CNN
-	1    8400 2350
-	1    0    0    -1  
+P 8400 2400
+F 0 "J6" H 8480 2392 50  0000 L CNN
+F 1 "Heater" H 8480 2301 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 8400 2400 50  0001 C CNN
+F 3 "~" H 8400 2400 50  0001 C CNN
+	1    8400 2400
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	8200 2450 8200 2550
 $Comp
 L power:+24V #PWR043
 U 1 1 5F03C9B5
@@ -537,8 +535,6 @@ F 3 "" H 8200 2150 50  0001 C CNN
 	1    8200 2150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8200 2150 8200 2350
 $Comp
 L Device:CP C13
 U 1 1 5F0A2BBD
@@ -571,17 +567,6 @@ F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10538 1250 50 
 F 3 "~" H 10500 1400 50  0001 C CNN
 	1    10500 1400
 	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C22
-U 1 1 5F0A7836
-P 11300 1500
-F 0 "C22" H 11300 1600 50  0000 L CNN
-F 1 "2.2uF" H 11250 1400 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 11338 1350 50  0001 C CNN
-F 3 "~" H 11300 1500 50  0001 C CNN
-	1    11300 1500
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP C24
@@ -622,7 +607,7 @@ U 1 1 5F0B9323
 P 9850 1200
 F 0 "U6" H 9850 1375 50  0000 C CNN
 F 1 "LM22675-5.0" H 9850 1284 50  0000 C CNN
-F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm" H 9000 1600 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9000 1600 50  0001 C CNN
 F 3 "" H 9000 1600 50  0001 C CNN
 	1    9850 1200
 	1    0    0    -1  
@@ -2451,7 +2436,6 @@ Wire Wire Line
 	7450 2450 7450 2550
 Wire Wire Line
 	7450 2550 8200 2550
-Connection ~ 8200 2550
 Wire Wire Line
 	8200 2550 8200 2650
 $Comp
@@ -2590,4 +2574,20 @@ F 3 "" H 10850 4600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10850 4600 10850 4550
+$Comp
+L Device:C C22
+U 1 1 5F0A7836
+P 11300 1500
+F 0 "C22" H 11300 1600 50  0000 L CNN
+F 1 "2.2uF" H 11250 1400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 11338 1350 50  0001 C CNN
+F 3 "~" H 11300 1500 50  0001 C CNN
+	1    11300 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2300 8200 2150
+Wire Wire Line
+	8200 2400 8200 2550
+Connection ~ 8200 2550
 $EndSCHEMATC
