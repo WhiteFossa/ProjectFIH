@@ -495,7 +495,7 @@ U 1 1 5F02FAAF
 P 8100 2850
 F 0 "Q3" H 8304 2896 50  0000 L CNN
 F 1 "IRLZ44N" H 8304 2805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8350 2775 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 8350 2775 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 8100 2850 50  0001 L CNN
 	1    8100 2850
 	1    0    0    -1  
