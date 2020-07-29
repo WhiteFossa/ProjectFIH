@@ -1703,9 +1703,6 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1600 780
 $EndComp
 Wire Wire Line
 	8350 7150 8300 7150
-Connection ~ 1650 6200
-Wire Wire Line
-	1650 6200 1550 6200
 Wire Wire Line
 	2750 6500 2950 6500
 Wire Wire Line
