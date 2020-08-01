@@ -2134,10 +2134,6 @@ F 3 "~" H 12500 6550 50  0001 C CNN
 	1    12500 6550
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	12300 6450 11150 6450
-Wire Wire Line
-	12300 6550 11150 6550
 $Comp
 L power:GND #PWR059
 U 1 1 5F645814
@@ -2153,9 +2149,9 @@ Wire Wire Line
 	12300 6650 12250 6650
 Wire Wire Line
 	12250 6650 12250 6700
-Text Notes 12550 6450 0    50   ~ 0
-RX
 Text Notes 12550 6550 0    50   ~ 0
+RX
+Text Notes 12550 6450 0    50   ~ 0
 TX
 Text Notes 12550 6650 0    50   ~ 0
 GND
@@ -2587,4 +2583,20 @@ Wire Wire Line
 Wire Wire Line
 	8200 2400 8200 2550
 Connection ~ 8200 2550
+Wire Wire Line
+	11150 6550 12100 6550
+Wire Wire Line
+	12100 6550 12100 6450
+Wire Wire Line
+	12100 6450 12300 6450
+Wire Wire Line
+	12300 6550 12200 6550
+Wire Wire Line
+	12200 6550 12200 6500
+Wire Wire Line
+	12200 6500 12000 6500
+Wire Wire Line
+	12000 6500 12000 6450
+Wire Wire Line
+	12000 6450 11150 6450
 $EndSCHEMATC

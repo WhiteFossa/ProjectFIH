@@ -1703,9 +1703,6 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1600 780
 $EndComp
 Wire Wire Line
 	8350 7150 8300 7150
-Connection ~ 1650 6200
-Wire Wire Line
-	1650 6200 1550 6200
 Wire Wire Line
 	2750 6500 2950 6500
 Wire Wire Line
@@ -2137,10 +2134,6 @@ F 3 "~" H 12500 6550 50  0001 C CNN
 	1    12500 6550
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	12300 6450 11150 6450
-Wire Wire Line
-	12300 6550 11150 6550
 $Comp
 L power:GND #PWR059
 U 1 1 5F645814
@@ -2590,4 +2583,20 @@ Wire Wire Line
 Wire Wire Line
 	8200 2400 8200 2550
 Connection ~ 8200 2550
+Wire Wire Line
+	11150 6550 12100 6550
+Wire Wire Line
+	12100 6550 12100 6450
+Wire Wire Line
+	12100 6450 12300 6450
+Wire Wire Line
+	12300 6550 12200 6550
+Wire Wire Line
+	12200 6550 12200 6500
+Wire Wire Line
+	12200 6500 12000 6500
+Wire Wire Line
+	12000 6500 12000 6450
+Wire Wire Line
+	12000 6450 11150 6450
 $EndSCHEMATC
