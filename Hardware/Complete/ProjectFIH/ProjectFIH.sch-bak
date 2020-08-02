@@ -2149,9 +2149,9 @@ Wire Wire Line
 	12300 6650 12250 6650
 Wire Wire Line
 	12250 6650 12250 6700
-Text Notes 12550 6450 0    50   ~ 0
-RX
 Text Notes 12550 6550 0    50   ~ 0
+RX
+Text Notes 12550 6450 0    50   ~ 0
 TX
 Text Notes 12550 6650 0    50   ~ 0
 GND
