@@ -516,13 +516,13 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J6
 U 1 1 5F039ABC
-P 8400 2400
-F 0 "J6" H 8480 2392 50  0000 L CNN
-F 1 "Heater" H 8480 2301 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 8400 2400 50  0001 C CNN
-F 3 "~" H 8400 2400 50  0001 C CNN
-	1    8400 2400
-	1    0    0    1   
+P 8400 2300
+F 0 "J6" H 8480 2292 50  0000 L CNN
+F 1 "Heater" H 8480 2201 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 8400 2300 50  0001 C CNN
+F 3 "~" H 8400 2300 50  0001 C CNN
+	1    8400 2300
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:+24V #PWR043
@@ -929,13 +929,13 @@ Connection ~ 12250 2950
 $Comp
 L Connector:Screw_Terminal_01x02 J9
 U 1 1 5F15006B
-P 12900 3250
-F 0 "J9" H 12980 3242 50  0000 L CNN
-F 1 "Payload" H 12980 3151 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 12900 3250 50  0001 C CNN
-F 3 "~" H 12900 3250 50  0001 C CNN
-	1    12900 3250
-	1    0    0    -1  
+P 12900 3350
+F 0 "J9" H 12980 3342 50  0000 L CNN
+F 1 "Payload" H 12980 3251 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 12900 3350 50  0001 C CNN
+F 3 "~" H 12900 3350 50  0001 C CNN
+	1    12900 3350
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	12150 3050 12700 3050
@@ -2291,13 +2291,13 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J2
 U 1 1 5F880536
-P 5100 9450
-F 0 "J2" H 5180 9442 50  0000 L CNN
-F 1 "Power" H 5180 9351 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 5100 9450 50  0001 C CNN
-F 3 "~" H 5100 9450 50  0001 C CNN
-	1    5100 9450
-	1    0    0    -1  
+P 5100 9550
+F 0 "J2" H 5180 9542 50  0000 L CNN
+F 1 "Power" H 5180 9451 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 5100 9550 50  0001 C CNN
+F 3 "~" H 5100 9550 50  0001 C CNN
+	1    5100 9550
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR030
@@ -2333,7 +2333,7 @@ Text Notes 5050 9300 0    50   ~ 0
 24V IN
 Text Notes 5200 9400 0    50   ~ 0
 +
-Text Notes 13100 3250 0    50   ~ 0
+Text Notes 12950 3250 0    50   ~ 0
 +
 $Comp
 L Connector:Conn_01x02_Male J4
