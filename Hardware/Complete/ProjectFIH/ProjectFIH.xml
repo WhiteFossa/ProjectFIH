@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/mnt/nfs/th/sps/fossa/Projects/Electronics/ProjectFIH/Hardware/Complete/ProjectFIH/ProjectFIH.sch</source>
-    <date>Сб 15 авг 2020 07:13:50</date>
+    <date>Сб 15 авг 2020 07:17:15</date>
     <tool>Eeschema 5.1.6-1.fc32</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -52,7 +52,7 @@
       <tstamp>5EFCCDFD</tstamp>
     </comp>
     <comp ref="DA1">
-      <value>LM335</value>
+      <value>LM135</value>
       <footprint>Package_TO_SOT_THT:TO-92</footprint>
       <libsource lib="Fossa_library" part="LM335" description=""/>
       <sheetpath names="/" tstamps="/"/>
