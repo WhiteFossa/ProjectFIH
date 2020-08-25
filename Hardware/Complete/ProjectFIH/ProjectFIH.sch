@@ -2599,4 +2599,8 @@ Wire Wire Line
 	12000 6500 12000 6450
 Wire Wire Line
 	12000 6450 11150 6450
+Text Notes 11800 2800 0    50   ~ 0
+Payload voltage
+Text Notes 4800 1550 0    50   ~ 0
+Overheat temperature\nSet to 30C - 3.03V input
 $EndSCHEMATC
