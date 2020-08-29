@@ -2157,7 +2157,7 @@ Text Notes 12550 6650 0    50   ~ 0
 GND
 Text Notes 12400 4950 0    50   ~ 0
 Programming
-Text GLabel 11550 6650 2    50   Input ~ 0
+Text GLabel 11950 6850 2    50   Input ~ 0
 IRQ
 $Comp
 L Diode:1N4148 D5
@@ -2172,20 +2172,12 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 11350
 $EndComp
 Wire Wire Line
 	11200 6650 11150 6650
-Wire Wire Line
-	11550 6650 11500 6650
-Text GLabel 11750 6750 2    50   Input ~ 0
+Text GLabel 11800 6950 2    50   Input ~ 0
 IRQResp
-Wire Wire Line
-	11750 6750 11150 6750
-Text GLabel 11250 6850 2    50   Input ~ 0
+Text GLabel 11700 7050 2    50   Input ~ 0
 MCUHeatOff
-Wire Wire Line
-	11250 6850 11150 6850
-Text GLabel 11700 6950 2    50   Input ~ 0
+Text GLabel 11700 7150 2    50   Input ~ 0
 MCU_PL_ON
-Wire Wire Line
-	11700 6950 11150 6950
 Text GLabel 3750 2650 3    50   Input ~ 0
 Temperature
 Wire Wire Line
@@ -2370,7 +2362,7 @@ L Device:R R15
 U 1 1 5F1FC80D
 P 5750 9300
 F 0 "R15" H 5820 9346 50  0000 L CNN
-F 1 "4.2k" H 5820 9255 50  0000 L CNN
+F 1 "4.3k" H 5820 9255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 9300 50  0001 C CNN
 F 3 "~" H 5750 9300 50  0001 C CNN
 	1    5750 9300
@@ -2436,7 +2428,7 @@ L Device:R R21
 U 1 1 5F2CA5BD
 P 7450 2100
 F 0 "R21" H 7520 2146 50  0000 L CNN
-F 1 "4.2k" H 7520 2055 50  0000 L CNN
+F 1 "4.3k" H 7520 2055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7380 2100 50  0001 C CNN
 F 3 "~" H 7450 2100 50  0001 C CNN
 	1    7450 2100
@@ -2599,4 +2591,43 @@ Wire Wire Line
 	12000 6500 12000 6450
 Wire Wire Line
 	12000 6450 11150 6450
+Text Notes 11800 2800 0    50   ~ 0
+Payload voltage
+Text Notes 4800 1550 0    50   ~ 0
+Overheat temperature\nSet to 30C - 3.03V input
+Wire Wire Line
+	11150 6950 11250 6950
+Wire Wire Line
+	11250 6950 11250 7150
+Wire Wire Line
+	11250 7150 11700 7150
+Wire Wire Line
+	11300 6850 11300 7050
+Wire Wire Line
+	11300 7050 11700 7050
+Wire Wire Line
+	11150 6850 11300 6850
+Wire Wire Line
+	11350 6950 11350 6750
+Wire Wire Line
+	11350 6750 11150 6750
+Wire Wire Line
+	11350 6950 11800 6950
+$Comp
+L Device:R R27
+U 1 1 5F536347
+P 11700 6850
+F 0 "R27" V 11493 6850 50  0000 C CNN
+F 1 "470" V 11584 6850 50  0000 C CNN
+F 2 "" V 11630 6850 50  0001 C CNN
+F 3 "~" H 11700 6850 50  0001 C CNN
+	1    11700 6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11950 6850 11850 6850
+Wire Wire Line
+	11550 6850 11550 6650
+Wire Wire Line
+	11550 6650 11500 6650
 $EndSCHEMATC
