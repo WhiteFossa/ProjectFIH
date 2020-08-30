@@ -1274,9 +1274,9 @@ Wire Wire Line
 	4650 6450 4650 6900
 Wire Wire Line
 	4650 6900 4700 6900
-Text Notes 5250 6200 0    50   ~ 0
+Text Notes 5350 7100 0    50   ~ 0
 MCU Fail
-Text Notes 5250 7100 0    50   ~ 0
+Text Notes 5350 6200 0    50   ~ 0
 MCU OK
 Wire Wire Line
 	3950 7100 4500 7100
@@ -1287,12 +1287,12 @@ Wire Wire Line
 $Comp
 L 74xx:74HC04 U1
 U 4 1 5F1DCE8A
-P 8000 7150
-F 0 "U1" H 8000 7467 50  0000 C CNN
-F 1 "74HC04" H 8000 7376 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8000 7150 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 8000 7150 50  0001 C CNN
-	4    8000 7150
+P 8150 7100
+F 0 "U1" H 8150 7417 50  0000 C CNN
+F 1 "74HC04" H 8150 7326 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8150 7100 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 8150 7100 50  0001 C CNN
+	4    8150 7100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1450,28 +1450,25 @@ Close - MCU test inhibit
 $Comp
 L Device:R R13
 U 1 1 5F0ECE76
-P 5600 6250
-F 0 "R13" V 5393 6250 50  0000 C CNN
-F 1 "470" V 5484 6250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5530 6250 50  0001 C CNN
-F 3 "~" H 5600 6250 50  0001 C CNN
-	1    5600 6250
+P 5550 6750
+F 0 "R13" V 5343 6750 50  0000 C CNN
+F 1 "470" V 5434 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5480 6750 50  0001 C CNN
+F 3 "~" H 5550 6750 50  0001 C CNN
+	1    5550 6750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5450 6250 5300 6250
-Connection ~ 5300 6250
-Wire Wire Line
-	5900 6250 5750 6250
+	5850 6750 5700 6750
 $Comp
 L power:GND #PWR036
 U 1 1 5F1376C2
-P 5900 6600
-F 0 "#PWR036" H 5900 6350 50  0001 C CNN
-F 1 "GND" H 5905 6427 50  0000 C CNN
-F 2 "" H 5900 6600 50  0001 C CNN
-F 3 "" H 5900 6600 50  0001 C CNN
-	1    5900 6600
+P 5850 7100
+F 0 "#PWR036" H 5850 6850 50  0001 C CNN
+F 1 "GND" H 5855 6927 50  0000 C CNN
+F 2 "" H 5850 7100 50  0001 C CNN
+F 3 "" H 5850 7100 50  0001 C CNN
+	1    5850 7100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1506,53 +1503,47 @@ Wire Wire Line
 $Comp
 L Fossa_library:74HC08 U2
 U 1 1 5F18724F
-P 7300 6200
-F 0 "U2" H 7350 6325 50  0000 C CNN
-F 1 "74HC08" H 7350 6234 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 6200 50  0001 C CNN
-F 3 "" H 7300 6200 50  0001 C CNN
-	1    7300 6200
+P 7450 6150
+F 0 "U2" H 7500 6275 50  0000 C CNN
+F 1 "74HC08" H 7500 6184 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7450 6150 50  0001 C CNN
+F 3 "" H 7450 6150 50  0001 C CNN
+	1    7450 6150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Fossa_library:74HC08 U2
 U 2 1 5F189EAD
-P 7300 6950
-F 0 "U2" H 7350 7075 50  0000 C CNN
-F 1 "74HC08" H 7350 6984 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7300 6950 50  0001 C CNN
-F 3 "" H 7300 6950 50  0001 C CNN
-	2    7300 6950
+P 7450 6900
+F 0 "U2" H 7500 7025 50  0000 C CNN
+F 1 "74HC08" H 7500 6934 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7450 6900 50  0001 C CNN
+F 3 "" H 7450 6900 50  0001 C CNN
+	2    7450 6900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7100 6500 7000 6500
+	7250 6450 7150 6450
 Wire Wire Line
-	7000 6500 7000 7250
+	7150 6450 7150 7200
 Wire Wire Line
-	7000 7250 7100 7250
-Wire Wire Line
-	7000 7250 5300 7250
-Wire Wire Line
-	5300 7250 5300 7000
-Connection ~ 7000 7250
-Connection ~ 5300 7000
-Text GLabel 7000 6300 0    50   Input ~ 0
+	7150 7200 7250 7200
+Text GLabel 7150 6250 0    50   Input ~ 0
 MCUHeatOff
 Wire Wire Line
-	7100 6300 7000 6300
-Text GLabel 7700 6400 2    50   Input ~ 0
+	7250 6250 7150 6250
+Text GLabel 7850 6350 2    50   Input ~ 0
 HeatOFF
 Wire Wire Line
-	7700 6400 7600 6400
-Text GLabel 6950 7050 0    50   Input ~ 0
+	7850 6350 7750 6350
+Text GLabel 7100 7000 0    50   Input ~ 0
 MCU_PL_ON
 Wire Wire Line
-	6950 7050 7100 7050
-Text GLabel 8350 7150 2    50   Input ~ 0
+	7100 7000 7250 7000
+Text GLabel 8500 7100 2    50   Input ~ 0
 PL_ON
 Wire Wire Line
-	7700 7150 7600 7150
+	7850 7100 7750 7100
 $Comp
 L Fossa_library:74HC08 U2
 U 5 1 5F20606F
@@ -1702,7 +1693,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1600 780
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8350 7150 8300 7150
+	8500 7100 8450 7100
 Wire Wire Line
 	2750 6500 2950 6500
 Wire Wire Line
@@ -2330,21 +2321,21 @@ Text Notes 12950 3250 0    50   ~ 0
 $Comp
 L Connector:Conn_01x02_Male J4
 U 1 1 5F18621B
-P 6100 6350
-F 0 "J4" H 6072 6324 50  0000 R CNN
-F 1 "MCU Fail LED" H 6072 6233 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6100 6350 50  0001 C CNN
-F 3 "~" H 6100 6350 50  0001 C CNN
-	1    6100 6350
+P 6050 6850
+F 0 "J4" H 6022 6824 50  0000 R CNN
+F 1 "MCU Fail LED" H 6022 6733 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6050 6850 50  0001 C CNN
+F 3 "~" H 6050 6850 50  0001 C CNN
+	1    6050 6850
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 6250 5900 6350
+	5850 6750 5850 6850
 Wire Wire Line
-	5900 6450 5900 6600
-Text Notes 6150 6350 0    50   ~ 0
+	5850 6950 5850 7100
+Text Notes 6100 6850 0    50   ~ 0
 +
-Text Notes 6150 6600 0    50   ~ 0
+Text Notes 6100 7100 0    50   ~ 0
 Red
 $Comp
 L Connector:Conn_01x02_Male J3
@@ -2630,4 +2621,11 @@ Wire Wire Line
 	11550 6850 11550 6650
 Wire Wire Line
 	11550 6650 11500 6650
+Wire Wire Line
+	5400 6750 5300 6750
+Connection ~ 5300 6750
+Connection ~ 7150 6450
+Wire Wire Line
+	5300 6450 7150 6450
+Connection ~ 5300 6450
 $EndSCHEMATC
