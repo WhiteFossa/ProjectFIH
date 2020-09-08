@@ -1,0 +1,2 @@
+Set fuses to next values:
+Temporary (no WDT): FL=1F, FH=C9

@@ -2407,7 +2407,7 @@ $EndComp
 Text Notes 7700 2350 0    50   ~ 0
 +
 Text Notes 7700 2250 0    50   ~ 0
-Orange
+White
 Wire Wire Line
 	7450 2450 7450 2550
 Wire Wire Line
