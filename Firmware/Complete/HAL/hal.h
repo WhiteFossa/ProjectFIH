@@ -45,7 +45,7 @@
  */
 #define HAL_PORTB_DIR 0b00000000
 #define HAL_PORTC_DIR 0b00000000
-#define HAL_PORTD_DIR 0b00110010
+#define HAL_PORTD_DIR 0b00111010
 
 /**
  * Ports and pins for various signals
@@ -68,6 +68,7 @@
 
 /* Payload on signal pin */
 #define HAL_PAYLOAD_ON_PIN 5
+
 
 
 /**

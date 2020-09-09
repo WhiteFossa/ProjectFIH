@@ -17,9 +17,9 @@ void main()
 
 	while(1)
 	{
-		hal_heater_on();
-		_delay_ms(500);
-		hal_heater_off();
-		_delay_ms(500);
+		hal_payload_on();
+		_delay_ms(5000);
+		hal_payload_off();
+		_delay_ms(5000);
 	}
 }
