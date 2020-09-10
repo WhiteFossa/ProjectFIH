@@ -9,20 +9,33 @@
 /* INT0 - HWDT Request handler */
 ISR(INT0_vect)
 {
+	/* Initiating a pulse only if we are not in process of pulse */
+	if (HAL_HWDT_IRQRESP_SM_STANDBY == hal_hwdt_irqresp_state_machine_state)
+	{
+		hal_hwdt_irqresp_state_machine_state = HAL_HWDT_IRQRESP_SM_PRE_PULSE;
+	}
 }
 
 /* Timer 0 overflow handler. Got called round every 2ms */
 ISR(TIMER0_OVF_vect)
 {
-	if (0 == isEnabled)
+	/* Hardware watchdog IRQ responce state machine */
+	if (HAL_HWDT_IRQRESP_SM_PRE_PULSE == hal_hwdt_irqresp_state_machine_state)
 	{
-		isEnabled = 255;
-		hal_heater_on();
+		/* Pre pulse -> pulse */
+		hal_pull_hwdt_irqresp_up();
+		hal_hwdt_irqresp_state_machine_state = HAL_HWDT_IRQRESP_SM_PULSE;
 	}
-	else
+	else if (HAL_HWDT_IRQRESP_SM_PULSE == hal_hwdt_irqresp_state_machine_state)
 	{
-		isEnabled = 0;
-		hal_heater_off();
+		/* Pulse -> post pulse */
+		hal_pull_hwdt_irqresp_down();
+		hal_hwdt_irqresp_state_machine_state = HAL_HWDT_IRQRESP_SM_POST_PULSE;
+	}
+	else if (HAL_HWDT_IRQRESP_SM_POST_PULSE == hal_hwdt_irqresp_state_machine_state)
+	{
+		/* Post pulse -> standby */
+		hal_hwdt_irqresp_state_machine_state = HAL_HWDT_IRQRESP_SM_STANDBY;
 	}
 }
 
@@ -45,7 +58,8 @@ void hal_init()
 	TCCR0 &= ~_BV(CS02);
 	TIMSK |= _BV(TOIE0); /* Interrupts enabled */
 
-	isEnabled = 0x00;
+	/* Awaiting for HWDT IRQs */
+	hal_hwdt_irqresp_state_machine_state = HAL_HWDT_IRQRESP_SM_STANDBY;
 
 	/* Last operation - enabling interrupts */
 	sei();

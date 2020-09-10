@@ -70,12 +70,21 @@
 #define HAL_PAYLOAD_ON_PIN 5
 
 
+/* States for HWDT IRQ Resp state machine */
+#define HAL_HWDT_IRQRESP_SM_STANDBY 0U /* Standby for IRQ, IRQRESP low */
+#define HAL_HWDT_IRQRESP_SM_PRE_PULSE 1U /* After IRQ, pre pulse, IRQRESP low */
+#define HAL_HWDT_IRQRESP_SM_PULSE 2U /* Pulse, IRQRESP high */
+#define HAL_HWDT_IRQRESP_SM_POST_PULSE 3U /* Post pulse, IRQRESP low */
+
+
 
 /**
  * Variables
  */
 
-volatile uint8_t isEnabled;
+/* HWDT IRQ Resp state machine state */
+volatile uint8_t hal_hwdt_irqresp_state_machine_state;
+
 
 /**
  * Functions (public)
