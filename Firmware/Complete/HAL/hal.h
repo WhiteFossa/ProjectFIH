@@ -16,7 +16,8 @@
 
 #include <avr/io.h> /* Common */
 #include <avr/interrupt.h> /* Interrupts support */
-#include <util/delay.h> /* Basic delays. TODO: Remove it */
+#include <stdio.h> /* I/O over UART */
+#include <util/delay.h> /* Basic delays */
 
 /**
  * End of includes
@@ -28,6 +29,13 @@
 #define F_CPU 8000000UL
 
 /**
+ * UART baudrate
+ */
+#define BAUD 9600
+
+#include <util/setbaud.h> /* Baudrate macroses */
+
+/**
  * Ports:
  * PC0 - Temperature input (ADC)
  *
@@ -37,6 +45,18 @@
  * PD3 - HWDT IRQ Response (output)
  * PD4 - Heater off (output)
  * PD5 - Payload on (output)
+ */
+
+/**
+ * ADC-related data:
+ * Vref = 2.56V
+ *
+ *	Temp	LM135	ADCin	Code
+ *	-50		2.23	0.66	264
+ *	+5		2.78	1.60	640
+ *	+25		2.98	2.02	808
+ *	+60		3.33	2.55	1020
+ *
  */
 
 /** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -76,7 +96,8 @@
 #define HAL_HWDT_IRQRESP_SM_PULSE 2U /* Pulse, IRQRESP high */
 #define HAL_HWDT_IRQRESP_SM_POST_PULSE 3U /* Post pulse, IRQRESP low */
 
-
+/* Temperature conversion related constants */
+#define HAL_ADC_AVERAGING_WINDOW_LENGTH 16U /* Averaging window length*/
 
 /**
  * Variables
@@ -84,6 +105,15 @@
 
 /* HWDT IRQ Resp state machine state */
 volatile uint8_t hal_hwdt_irqresp_state_machine_state;
+
+/* ADC averaging window */
+volatile uint16_t hal_adc_averaging_window[HAL_ADC_AVERAGING_WINDOW_LENGTH];
+
+/* ADC average value, multiplied by window length. */
+volatile int32_t hal_adc_average_value_multiplied;
+
+/* Averaged ADC value, use it to temperature measurements */
+volatile uint16_t hal_adc_average;
 
 
 /**
@@ -117,5 +147,11 @@ void hal_pull_hwdt_irqresp_down();
 /**
  * Functions (private)
  */
+
+/* Put character into stream */
+static int hal_uart_putchar(char c, FILE *stream);
+
+/* Streams */
+static FILE hal_uart_stdout = FDEV_SETUP_STREAM(hal_uart_putchar, NULL, _FDEV_SETUP_WRITE);
 
 #endif /* HAL_HAL_H_ */
