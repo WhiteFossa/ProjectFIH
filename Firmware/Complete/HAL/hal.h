@@ -17,7 +17,6 @@
 #include <avr/io.h> /* Common */
 #include <avr/interrupt.h> /* Interrupts support */
 #include <stdio.h> /* I/O over UART */
-#include <util/delay.h> /* Basic delays */
 
 /**
  * End of includes
@@ -57,7 +56,16 @@
  *	+25		2.98	2.02	808
  *	+60		3.33	2.55	1020
  *
+ * ADC = 6.873 * Tcelsius + 607.64
+ *
+ * Delta(ADC-per-Celsius) = 6.873
+ *
  */
+
+/* Boolean */
+#define bool uint8_t
+#define true 0xFFU
+#define false 0x00U
 
 /** !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  *  !!PORTS DIRECTIONS - WRONG SETTINGS WILL DAMAGE HARDWARE!!
@@ -130,6 +138,7 @@ void hal_init();
  */
 void hal_heater_on();
 void hal_heater_off();
+bool hal_is_heater_on();
 
 
 /**
@@ -137,12 +146,16 @@ void hal_heater_off();
  */
 void hal_payload_on();
 void hal_payload_off();
+bool hal_is_payload_on();
 
 /**
  * HWDT IRQ Resp low-level control
  */
 void hal_pull_hwdt_irqresp_up();
 void hal_pull_hwdt_irqresp_down();
+
+/* Returns current temperature (as ADC readings) */
+uint16_t hal_get_temperature();
 
 /**
  * Functions (private)

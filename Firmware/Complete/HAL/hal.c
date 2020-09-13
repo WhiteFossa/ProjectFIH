@@ -61,10 +61,6 @@ ISR(ADC_vect)
 	hal_adc_average_value_multiplied += hal_adc_averaging_window[HAL_ADC_AVERAGING_WINDOW_LENGTH - 1]; /* Newcomer measurement */
 
 	hal_adc_average = (uint16_t)(hal_adc_average_value_multiplied / (int32_t)HAL_ADC_AVERAGING_WINDOW_LENGTH);
-
-	printf("ADC average: %d\n", hal_adc_average);
-
-	_delay_ms(100);
 }
 
 void hal_init()
@@ -133,6 +129,18 @@ void hal_heater_off()
 	HAL_HEATER_OFF_PORT |= _BV(HAL_HEATER_OFF_PIN);
 }
 
+bool hal_is_heater_on()
+{
+	if (0x00 == (HAL_HEATER_OFF_PORT & _BV(HAL_HEATER_OFF_PIN))) /* Heater is activated by zero */
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 void hal_payload_on()
 {
 	HAL_PAYLOAD_ON_PORT |= _BV(HAL_PAYLOAD_ON_PIN);
@@ -143,6 +151,18 @@ void hal_payload_off()
 	HAL_PAYLOAD_ON_PORT &= ~_BV(HAL_PAYLOAD_ON_PIN);
 }
 
+bool hal_is_payload_on()
+{
+	if (0x00 != (HAL_PAYLOAD_ON_PORT & _BV(HAL_PAYLOAD_ON_PIN)))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 void hal_pull_hwdt_irqresp_up()
 {
 	HAL_HWDT_IRQ_RESP_PORT |= _BV(HAL_HWDT_IRQ_RESP_PIN);
@@ -151,6 +171,11 @@ void hal_pull_hwdt_irqresp_up()
 void hal_pull_hwdt_irqresp_down()
 {
 	HAL_HWDT_IRQ_RESP_PORT &= ~_BV(HAL_HWDT_IRQ_RESP_PIN);
+}
+
+uint16_t hal_get_temperature()
+{
+	return hal_adc_average;
 }
 
 /**
